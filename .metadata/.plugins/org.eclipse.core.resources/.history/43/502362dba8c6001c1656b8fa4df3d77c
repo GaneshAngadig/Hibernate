@@ -1,0 +1,10 @@
+package com.xworkz.tv.tester;
+
+import com.xworkz.tv.entity.TvChannel;
+
+public class TvChannelTester {
+	TvChannel channel=new TvChannel();
+	
+	
+
+}

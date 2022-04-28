@@ -1,0 +1,5 @@
+package com.xworkz.tv.entity;
+
+public class TvChannel {
+
+}
