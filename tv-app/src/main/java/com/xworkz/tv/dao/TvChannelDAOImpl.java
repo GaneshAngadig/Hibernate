@@ -1,5 +1,7 @@
 package com.xworkz.tv.dao;
 
+import java.lang.invoke.ClassSpecializer.Factory;
+
 import com.xworkz.tv.entity.TvChannel;
 
 import jakarta.persistence.EntityManager;
@@ -54,6 +56,21 @@ public class TvChannelDAOImpl implements TvChannelDAO {
 		} finally {
 			if (entityManager != null)
 				entityManager.close();
+		}
+		
+	}
+
+	@Override
+	public void getChannelById(Integer channelId) {
+		TvChannel tvChannel=null;
+		EntityManager entityManager=null;
+		EntityManagerFactory factory=null;
+		try {
+			entityManager= factory.createEntityManager();
+			tvChannel=entityManager.find(TvChannel.class, channelId);
+			
+		} catch (Exception e) {
+			// TODO: handle exception
 		}
 		
 	}
